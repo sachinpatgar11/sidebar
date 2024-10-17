@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found</title>
+  <script>
+    // Redirect to the correct path
+    const redirect = () => {
+        const path = window.location.pathname;
+        const basePath = "/<your-repo-name>";
+        window.location.href = basePath + path;
+    };
+    redirect();
+</script>
+</head>
+<body>
+</body>
+</html>
