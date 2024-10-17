@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./pages/DashBoard";
 import Sidebar from "./component/Sidebar";
 import News from "./pages/News";
@@ -13,7 +13,7 @@ function App() {
   const [sideNav, setSideNav] = useState(true);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Sidebar sideNav={sideNav} setSideNav={setSideNav}></Sidebar>
       <Routes>
         <Route path="/" element={<DashBoard sideNav={sideNav} />}></Route>
@@ -29,7 +29,7 @@ function App() {
         <Route path="/settings" element={<Setting sideNav={sideNav} />}></Route>
         <Route path="/support" element={<Support sideNav={sideNav} />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
